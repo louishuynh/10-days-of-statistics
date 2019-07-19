@@ -66,3 +66,15 @@ def calculate_median(sorted_list):
 
 
     return median, lower_half, upper_half
+
+
+# find 1st and 3rd quartiles by first finding median, lower and upper half
+# then find median of the lower and upper halves
+median, lower_half, upper_half = calculate_median(numbers)
+quartile_1, _, _ = calculate_median(lower_half)
+quartile_3, _, _ = calculate_median(upper_half)
+
+# STEP 3: PRINT TO STDOUT
+print(quartile_1)
+print(median)
+print(quartile_3)
